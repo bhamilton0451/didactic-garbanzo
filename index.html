@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Javascript</title>
+  <meta name="author" content="Bryan Montgomery Hamilton">
+  <meta name="keywords" content="200021401, web, javascript">
+  <meta name="description" content="Atividade sobre javascript">
+
+  <script>
+    function checkResposta(a, b) {
+      a = a.trim()
+      b = b.trim()
+
+      if (!a || !b) {
+        return "Erro: Preencha todos os campos."
+      } return "Resposta Preenchida."
+    }
+
+    function editTexto(a, b) {
+      document.getElementById("paragraph_1").innerHTML = checkResposta(a, b)
+    }
+  </script>
+</head>
+
+<body>
+
+  <label for="texto1">Login:</label>
+  <input type="text" id="a"><br>
+
+  <label for="texto2">Senha:</label>
+  <input type="password" id="b"><br>
+
+  <button onclick="editTexto(
+    document.getElementById('a').value, 
+    document.getElementById('b').value
+  )">
+    Enviar
+  </button>
+
+  <p id="paragraph_1"></p>
+</body>
+
+</html>
